@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Georgia, serif;
   background-color: #f8f8f8;
@@ -11,3 +15,52 @@ body {
 }
 
 /* Add your own custom styles here */
+.book-card {
+  width: 28%;
+  text-align: center;
+}
+
+.book-card img {
+  width: 200px;
+}
+
+.bookcard-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bookspage {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.singlebook {
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.singlebook img {
+  width: 250px;
+}
+
+.register {
+  border: 2px solid black;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 15px;
+}
+
+.navigations {
+  /* width: 90%;
+  margin: 0 auto; */
+}
+
+.signUpNow {
+  text-align: center;
+}
