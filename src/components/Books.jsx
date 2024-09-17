@@ -9,8 +9,9 @@ function Books() {
   useEffect(() => {
     axios(`${import.meta.env.VITE_BASE_URL}/api/books`)
       .then((data) => {
-        console.log(data.data.books), setBooks(data.data.books);
-        setBooksToShow(data.data.books);
+        console.log(data.data);
+        setBooks(data.data);
+        setBooksToShow(data.data);
       })
       .catch((err) => console.log(err));
   }, []);
