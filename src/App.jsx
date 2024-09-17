@@ -12,7 +12,7 @@ function App() {
   const [token, setToken] = useState(null);
   useEffect(() => {
     const localToken = localStorage.getItem("token");
-    console.log(localToken);
+
     if (localToken) {
       setToken(localToken);
     }
