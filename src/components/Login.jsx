@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -25,24 +25,27 @@ function Login({ setToken, token }) {
     }
   };
 
-  if (token) navigate("/account");
+  if (token) {
+    navigate("/account");
+  }
+
   return (
-    <div>
-      <form className="register" onSubmit={handleSubmit}>
+    <div className="register">
+      <form onSubmit={handleSubmit}>
         <label>
           Email:
-          <input type="text" name="email" onChange={handleInput} />
+          <input type="email" name="email" onChange={handleInput} />
         </label>
         <label>
           Password:
-          <input type="text" name="password" onChange={handleInput} />
+          <input type="password" name="password" onChange={handleInput} />
         </label>
         <button>Login</button>
 
         <div className="signUpNow">
           <p>
             Don't have an account?
-            <Link to="/register">Sign up now!</Link>
+            <Link to="/register">Register now!</Link>
           </p>
         </div>
       </form>

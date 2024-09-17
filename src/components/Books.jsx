@@ -9,9 +9,9 @@ function Books() {
   useEffect(() => {
     axios(`${import.meta.env.VITE_BASE_URL}/api/books`)
       .then((data) => {
-        console.log(data.data);
-        setBooks(data.data);
-        setBooksToShow(data.data);
+        console.log(data.data.books);
+        setBooks(data.data.books);
+        setBooksToShow(data.data.books);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -25,11 +25,11 @@ function Books() {
 
   return (
     <div className="bookspage">
-      <label>
+      <div>
         Search for a book
         <input type="text" onChange={handleBookSearch} />
-      </label>
-      <BookCardList books={booksToShow} />;
+      </div>
+      <BookCardList books={booksToShow} />
     </div>
   );
 }

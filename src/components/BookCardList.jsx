@@ -3,9 +3,9 @@ import BookCard from "./BookCard";
 
 function BookCardList({ books }) {
   return (
-    <div className='bookcard-list'>
+    <div className="bookcard-list">
       {books.map((book) => (
-        <BookCard key={book.title} book={book} />
+        <BookCard key={book.id} book={book} />
       ))}
     </div>
   );

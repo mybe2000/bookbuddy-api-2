@@ -20,7 +20,6 @@ function App() {
   //
   return (
     <>
-      <p>{token}</p>
       <h1>Library App</h1>
       <Navigations token={token} setToken={setToken} />
 

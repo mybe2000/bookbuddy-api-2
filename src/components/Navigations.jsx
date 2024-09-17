@@ -8,17 +8,15 @@ function Navigations({ token, setToken }) {
   };
 
   return (
-    <div className="navigations">
+    <nav>
       <Link to="/">See all books</Link>
+      {token && <Link to="/account">My Account</Link>}
       {token ? (
-        <div>
-          <button onClick={handleLogOut}>Log out</button>
-          <Link to="/account">Account</Link>
-        </div>
+        <button onClick={handleLogOut}>Log out</button>
       ) : (
         <Link to="/login">Log In</Link>
       )}
-    </div>
+    </nav>
   );
 }
 

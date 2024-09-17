@@ -45,13 +45,15 @@ function Account({ token }) {
   return (
     <div>
       <h2>My Account</h2>
-      <p>{user?.firstname}</p>
-      <p>{user?.lastname}</p>
+      <p>
+        {user?.firstname} {user?.lastname}
+      </p>
       <p>{user?.email}</p>
       <p>Books currently checked out:</p>
       {books.map((book) => (
-        <div key={book.title}>
+        <div key={book.id}>
           <h2>{book.title}</h2>
+          <img src={book.coverimage} alt={book.title} />
           <button
             onClick={() => {
               handleReturn(book.id);
